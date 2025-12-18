@@ -25,7 +25,7 @@ h1{
    text-align: center;
 }
 p{
-    text-align: center;
+    
 }
 footer{
     background-color: black;
@@ -485,4 +485,6 @@ footer p{
   }
 }
 
-.
+.hitta{
+    text-align: center;
+}
