@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					<li><a href="om mrstrid.html ">Om</a></li>
 					<li><a href="hitta-hit.html">hitta-hit</a></li>
 					<button><li><a href="boka-bord.html">Boka bord</a></li></button>
+					
                     
 				</ul>
 			</div>
@@ -25,4 +26,19 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 });
 
+  
+  const reveals = document.querySelectorAll('.reveal');
 
+  function revealOnScroll() {
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+
+      if (elementTop < windowHeight - 100) {
+        reveals[i].classList.add('active');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();

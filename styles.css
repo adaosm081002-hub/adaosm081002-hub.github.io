@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 body {
   background: var(--navy);
   color: var(--cream);
@@ -13,6 +14,7 @@ body {
 nav {
   background: var(--charcoal);
   padding: 1rem 2rem;
+
 }
 ul li {
     display: inline;
@@ -20,6 +22,10 @@ ul li {
 }
 h1{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   text-align: center;
+}
+p{
+    text-align: center;
 }
 footer{
     background-color: black;
@@ -85,6 +91,7 @@ button {
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
+  border-bottom: none;
 }
 
 button:hover {
@@ -93,12 +100,14 @@ button:hover {
 }
  .slider{
     width: 100%;
-    height: 500px;
+    height: 900px;
     overflow: hidden;
  }
  figure{
     position: relative;
     left: 0;
+    width: 400%;
+    animation: 10s slide infinite;
 
  }
  .slide{
@@ -118,5 +127,362 @@ button:hover {
  }
  .slide img{
     width: 100%;
-    height: 500px;
+    height: 899px;
+    left: 0;
+    right: 0;
+    object-fit: cover;
  }
+ @keyframes slide{
+    0%{
+        left: 0;
+    }
+     10%{
+        left: 0;
+    }
+     20%{
+        left: -100%;
+    }
+     30%{
+        left: -100%;
+    }
+     40%{
+        left: -200%;
+    }
+     50%{
+        left: -200%;
+    }
+     55%{
+        left: -300%;
+    }
+     65%{
+        left: -300%;
+    }
+     66%{
+        left: -200%;
+    }
+     74%{
+        left: -200%;
+    }
+     75%{
+        left: -100%;
+    }
+     85%{
+        left: -100%;
+    }
+     90%{
+        left: 0;
+    }
+     100%{
+        left: 0;
+    }
+    
+ }
+ 
+
+
+
+
+
+
+
+
+    
+    
+
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1.2s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.strid-block{
+    height: 900px;
+    width: 100%;
+}
+
+.strid{
+    height: 800px;
+    width: 100%;
+    
+}
+.text-block{
+    background-color: var(--charcoal);
+    color: var(--cream);
+    
+    text-align: center;
+    padding: 120px 20px;
+}
+.text-block .container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.text-block h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.text-block p{
+    font-size: 1.3rem;
+    line-height: 1.6;
+    font-family: playfair display, serif;
+}
+.reveal{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+.strid img{
+    width: 100%;
+    height: 910px;
+    object-fit: cover;
+    opacity: 1;
+}
+
+footer p{
+    color: var(--cream);
+    text-align: center;
+    padding: 10px;
+}
+.menu-section {
+  background: var(--navy);
+  color: var(--cream);
+  padding: 120px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 80px;
+}
+
+.menu-category h3 {
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 10px;
+}
+
+.menu-item {
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.dish {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.price {
+  float: right;
+  color: var(--gold);
+}
+
+.description {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  font-size: 0.95rem;
+  transition: 0.4s ease;
+  margin-top: 10px;
+  color: var(--cream);
+}
+
+.menu-item:hover .description {
+  max-height: 100px;
+  opacity: 1;
+}
+
+.hero-video {
+  width: 40%;
+  height: 100vh;
+  object-fit: cover; /* VIKTIGT: ingen stretch */
+    display: block;
+}
+.text-block img{
+    width: 50%;
+    top: 10;
+    height: auto;
+    
+
+
+}
+
+
+/* Media row: place video and image side-by-side on wide screens, stack on narrow screens */
+.image-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 300px;
+  gap: 40px;
+  padding: 60px;
+}
+.tall {
+  grid-row: span 2;
+}
+.img-box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.img-box img {
+  width: 100%;
+  height: 200%;
+  object-fit: cover;
+}
+
+
+        
+       
+
+        
+
+        /* Bilderna – varsin rad till höger */
+        .img-box {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Snygg beskärning */
+        }
+
+        /* Den första bilden (t.ex. Rotselleri) */
+        .img-box.top {
+            grid-row: 1;
+            grid-column: 2;
+        }
+
+        /* Den andra bilden (t.ex. Svamprisotto) */
+        .img-box.bottom {
+            grid-row: 2;
+            grid-column: 2;
+        }
+
+        /* Responsivt för mindre skärmar (mobil) */
+        @media (max-width: 768px) {
+            .media-row {
+                grid-template-columns: 1fr; /* En kolumn */
+                grid-template-rows: auto auto auto; /* Automatisk höjd */
+            }
+
+            .media-item.media-video {
+                grid-row: 1;
+                grid-column: 1;
+            }
+
+            .img-box.top {
+                grid-row: 2;
+                grid-column: 1;
+            }
+
+            .img-box.bottom {
+                grid-row: 3;
+                grid-column: 1;
+            }
+        }
+        /* Uppdaterad stil för videon */
+.media-item.video {
+    grid-row: 1 / 3;      /* Spänner över båda rader */
+    grid-column: 1;
+    width: 100%;
+    height: 100%;         /* Viktigt: tar upp hela grid-cellen */
+    overflow: hidden;     /* Klipper av om videon är för stor */
+}
+
+.media-item.video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* NYTT: Fyller ut hela området, beskär smart utan att förvrängas */
+    object-position: center; /* Centrerar videon om den beskärs */
+}
+
+/* Se till att grid-raderna är lika stora */
+.media-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; /* Lika höga rader – nu styr bilderna höjden lika */
+    gap: 40px;
+    align-items: stretch;
+    height: 100%; /* Hjälper containern att sträcka sig */
+}
+.img{
+    width: 100%;
+    height: 500px;
+
+}
+.img{
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+.story {
+  background-color: #0A1A2F; /* marinblå */
+  color: #F4F0E6; /* kräm */
+  padding: 100px 0;
+}
+
+.story-row {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 120px auto;
+  padding: 0 40px;
+  gap: 80px;
+}
+
+.story-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.story-text {
+  flex: 1;
+}
+
+.story-text h2 {
+  color: #D4AF37; 
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.story-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.story-image {
+  flex: 1;
+}
+
+.story-image img {
+  width: 100%;
+}
+
+.container {
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+.
