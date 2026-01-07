@@ -1,18 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 
-<head>
+<head role="banner">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css" />
+        <meta name="description" content=" Restaurang Chef Tingeling i Blackeberg, Stockholm. Upptäck vår meny, boka bord och hitta hit för en oförglömlig matupplevelse.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.min.css" />
     <title>Chef Tingeling</title>
   <script src="script.js" defer></script>
 </head>
 
-<body>
+<body role="main">
     <div id="site-nav"></div>
     <h1></h1>
     <p></p>
+<section class="booking-section">
+        <h1>Boka Bord</h1>
 
+        <div class="form-container">
+            <form id="booking-form">
+                <label for="date">Datum</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Tid</label>
+                <select id="time" name="time" required>
+                    <option value="">Välj tid</option>
+                    <option value="17:00">17:00</option>
+                    <option value="17:30">17:30</option>
+                    <option value="18:00">18:00</option>
+                    <option value="18:30">18:30</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="21:00">21:00</option>
+                    <option value="21:30">21:30</option>
+                </select>
+
+                <label for="guests">Antal personer</label>
+                <select id="guests" name="guests" required>
+                    <option value="">Välj antal</option>
+                    <option value="1">1 person</option>
+                    <option value="2">2 personer</option>
+                    <option value="3">3 personer</option>
+                    <option value="4">4 personer</option>
+                    <option value="5">5 personer</option>
+                    <option value="6">6 personer</option>
+                    <option value="7+">7+ personer</option>
+                </select>
+
+                <label for="name">Ditt namn</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-post</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Telefon</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <button type="submit">Boka Bord Nu</button>
+            </form>
+
+            <div id="confirmation">
+                Tack! Din bokning är skickad.<br>
+                Vi återkommer snart med bekräftelse.
+            </div>
+        </div>
+    </section>
 </body>
-
+<footer role="contentinfo">
+  <p>&copy; 2024 Chef Tingeling. Alla rättigheter förbehållna.</p>
+</footer>
 </html>
